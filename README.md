@@ -1,10 +1,6 @@
 # Journal
 
-<ul>
   {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      {{ post.excerpt }}
-    </li>
+      ## {{ post.title }}
+      {{ post }}
   {% endfor %}
-</ul>
