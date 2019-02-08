@@ -4,7 +4,7 @@ There are many extensions in LINQ which require something called an `IEqualityCo
 
 `IEnumerable<TSource> Except<TSource>(this IEnumerable<TSource> first, IEnumerable<TSource> second, IEqualityComparer<TSource> comparer);`
 
-The `IEqualityComparer` is passed in to compare the equality of the items in your IEnumerable, obviously. It can be quite a pain to see that you need to create your own implementation of it to use it. Maybe you'll fall back into a quick and dirty way of acheiving what you want without using that cumbersome `IEqualityComparer` override.
+The `IEqualityComparer<T>` is passed in to compare equality of items of type `T`. It can be quite a pain to see that you need to create your own implementation of it to use the extension method. Maybe you'll fall back into a quick and dirty way of acheiving what you want without using that cumbersome `IEqualityComparer<T>` override.
 
 The following is a way of instantiating an `IEqualityComparer<T>` whenever you need it. The factory method takes in a `Func<T, T, bool>` and uses it to determine equality:
 
