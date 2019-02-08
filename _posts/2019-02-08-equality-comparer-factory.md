@@ -14,4 +14,7 @@ You can this idea a step further and provide some useful overrides whenever you 
 
 <script src="https://gist.github.com/craigles/0b735bb0d09630c9ae37bae3f0af4374.js"></script>
 
+Example usage:
+<script src="https://gist.github.com/craigles/920a093ddf38ddf58e8a64d3401130f1.js"></script>
+
 It's a conveniant way to make use of LINQ's extensions for simple equality comparison. I hope you like it.
