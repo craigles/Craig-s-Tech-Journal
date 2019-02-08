@@ -6,7 +6,6 @@ There are many extensions in LINQ which require something called an `IEqualityCo
 - `public static bool Contains<TSource>(this IEnumerable<TSource> source, TSource value, IEqualityComparer<TSource> comparer);`
 - `public static IEnumerable<TSource> Distinct<TSource>(this IEnumerable<TSource> source, IEqualityComparer<TSource> comparer);`
 
-
 The `IEqualityComparer` is passed in to compare the equality of the items in your IEnumerable, obviously. It can be quite a pain to see that you need to create your own implementation of it to use it. Maybe you'll fall back into a quick and dirty way of acheiving what you want without using that cumbersome `IEqualityComparer` override.
 
 The following is a way of instantiating an `IEqualityComparer<T>` whenever you need it. The factory method takes in a `Func<T, T, bool>` and uses it to determine equality:
