@@ -1,10 +1,8 @@
 I'm a big fan of the LINQ Extensions in C#. It provides a functional way of operating on enumerable items. It has been a part of the .NET Framework for a long, long time and is obviously no secret to anyone now.
 
-There are many extensions in LINQ which require something called an `IEqualityComparer`:
+There are many extensions in LINQ which require something called an `IEqualityComparer`. Eg:
 
-- `IEnumerable<TSource> Except<TSource>(this IEnumerable<TSource> first, IEnumerable<TSource> second, IEqualityComparer<TSource> comparer);`
-- `bool Contains<TSource>(this IEnumerable<TSource> source, TSource value, IEqualityComparer<TSource> comparer);`
-- `IEnumerable<TSource> Distinct<TSource>(this IEnumerable<TSource> source, IEqualityComparer<TSource> comparer);`
+`IEnumerable<TSource> Except<TSource>(this IEnumerable<TSource> first, IEnumerable<TSource> second, IEqualityComparer<TSource> comparer);`
 
 The `IEqualityComparer` is passed in to compare the equality of the items in your IEnumerable, obviously. It can be quite a pain to see that you need to create your own implementation of it to use it. Maybe you'll fall back into a quick and dirty way of acheiving what you want without using that cumbersome `IEqualityComparer` override.
 
