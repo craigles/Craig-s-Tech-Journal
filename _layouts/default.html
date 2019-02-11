@@ -24,7 +24,8 @@
     <section class="main-content">
       {{ content }}
       
-      {% for i in (0..(site.posts.size - 1)) %}
+      {% assign postSize = site.posts.size - 1 %}
+      {% for i in (0..postSize) %}
         {% if i > 0 %}
           <hr/>
         {% endif %}
