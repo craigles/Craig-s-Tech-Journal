@@ -24,8 +24,10 @@
     <section class="main-content">
       {{ content }}
       
-      {% for i in (0..site.posts.size) %}
-        <hr/>
+      {% for i in (0..site.posts.size - 1) %}
+        {% if i > 0 %}
+          <hr/>
+        {% endif %}
         {% assign post = site.posts[i] %}
         <h2>{{ post.title }}</h2>
         <span><i>{{ post.date|date:"%b %d, %Y" }}</i></span>
