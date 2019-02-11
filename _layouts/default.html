@@ -23,9 +23,7 @@
         {{ post.content }}
       {% endfor %}
       
-      <footer class="site-footer">
-        <span class="site-footer-credits">Last updated: {{ site.time|date:"%b %d, %Y %T" }}</span>
-      </footer>
+    {% include footer.html %}
     </section>
 
     {% if site.google_analytics %}
