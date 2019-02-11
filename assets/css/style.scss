@@ -14,3 +14,10 @@
     padding: 1rem 2.5rem;
   }
 }
+
+.main-content a {
+  color: $section-headings-color;
+  &:hover {
+    text-decoration: none;
+  }
+}
