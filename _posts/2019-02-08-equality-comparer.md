@@ -2,7 +2,7 @@ I'm a big fan of the LINQ Extensions in C#. It provides a functional way of oper
 
 There are many extensions in LINQ which require something called an `IEqualityComparer`. Eg:
 
-```C#
+```csharp
 IEnumerable<TSource> Except<TSource>(
     this IEnumerable<TSource> first, 
     IEnumerable<TSource> second, 
