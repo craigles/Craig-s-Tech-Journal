@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   </head>
   <body>
-    {{ include header.html }}
+    {% include header.html %}
     <section class="main-content">
       <h2>{{ page.title }}</h2>
       <span><i>{{ page.date|date:"%b %d, %Y" }}</i></span>
