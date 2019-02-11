@@ -2,7 +2,12 @@ I'm a big fan of the LINQ Extensions in C#. It provides a functional way of oper
 
 There are many extensions in LINQ which require something called an `IEqualityComparer`. Eg:
 
-`IEnumerable<TSource> Except<TSource>(this IEnumerable<TSource> first, IEnumerable<TSource> second, IEqualityComparer<TSource> comparer);`
+```
+IEnumerable<TSource> Except<TSource>(
+    this IEnumerable<TSource> first, 
+    IEnumerable<TSource> second, 
+    IEqualityComparer<TSource> comparer);
+```
 
 The `IEqualityComparer<T>` is passed in to compare equality of items of type `T`. It can be quite a pain to see that you need to create your own implementation of it to use the extension method. Maybe you'll fall back into a quick and dirty way of acheiving what you want without using that cumbersome `IEqualityComparer<T>` override.
 
