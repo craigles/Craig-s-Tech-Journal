@@ -19,7 +19,8 @@
       
       {% assign postSize = site.posts.size - 1 %}
       {% for i in (0..postSize) %}
-        {% if i > 0 %}
+        {% if i > && i < postSize %}
+          <hr/>
         {% endif %}
         {% assign post = site.posts[i] %}
         <h2>{{ post.title }}</h2>
