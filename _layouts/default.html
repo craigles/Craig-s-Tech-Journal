@@ -36,7 +36,7 @@
       {% endfor %}
       
       <footer class="site-footer">
-        <span class="site-footer-credits">{{ site.time }}</span>
+        <span class="site-footer-credits">Last updated: {{ post.time|date:"%b %d, %Y %T" }}</span>
       </footer>
     </section>
 
