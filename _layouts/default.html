@@ -25,6 +25,7 @@
       {{ content }}
       
       {% for post in site.posts %}
+          <hr/>
           <h2>{{ post.title }}</h2>
           <span><i>{{ post.date|date:"%b %d, %Y" }}</i></span>
           {{ post.content }}
