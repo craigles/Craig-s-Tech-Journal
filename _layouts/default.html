@@ -25,9 +25,7 @@
       {{ content }}
       
       {% for i in (0..site.posts.size) %}
-        {% if i > 0 %}
-          <hr/>
-        {% endif %}
+        <hr/>
         {% assign post = site.posts[i] %}
         <h2>{{ post.title }}</h2>
         <span><i>{{ post.date|date:"%b %d, %Y" }}</i></span>
