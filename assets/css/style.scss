@@ -4,4 +4,7 @@
 
 .page-header a {
   color: #fff;
+  &:hover {
+    text-decoration: underline;
+  }
 }
