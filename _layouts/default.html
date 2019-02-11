@@ -19,7 +19,7 @@
       
       {% assign postSize = site.posts.size - 1 %}
       {% for i in (0..postSize) %}
-        {% if i > and i < postSize %}
+        {% if i > 0 and i < postSize %}
           <hr/>
         {% endif %}
         {% assign post = site.posts[i] %}
