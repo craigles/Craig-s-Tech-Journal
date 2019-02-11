@@ -24,11 +24,14 @@
     <section class="main-content">
       {{ content }}
       
-      {% for post in site.posts %}
+      {% for i in (1..site.posts.size) %}
+        {% if i > 1 %}
           <hr/>
-          <h2>{{ post.title }}</h2>
-          <span><i>{{ post.date|date:"%b %d, %Y" }}</i></span>
-          {{ post.content }}
+        {% endif %}
+        {% assign post = site.posts[i] %}
+        <h2>{{ post.title }}</h2>
+        <span><i>{{ post.date|date:"%b %d, %Y" }}</i></span>
+        {{ post.content }}
       {% endfor %}
       
       <footer class="site-footer">
